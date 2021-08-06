@@ -21,6 +21,11 @@ pre:after {
   animation: blink 500ms linear infinite alternate;
 }
 
+pre.no-cursor:after {
+  content: none;
+  animation: none;
+}
+
 pre code {
   display: inline !important;
   padding: 0 !important;
