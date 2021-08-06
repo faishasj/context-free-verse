@@ -1,0 +1,22 @@
+<head>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="highlight/styles/base16/chalk.min.css">
+  <script src="js/index.js"></script>
+  <script src="js/poems.js"></script>
+  <script src="highlight/highlight.min.js"></script>
+  <title>Context-Free Verse</title>
+</head>
+
+<body class="hljs">
+  <div class="container hljs">
+    <div class="code">
+      <pre><code id="typewriter" class="language-js"></code></pre>
+    </div>
+  </div>
+  
+  <script>
+    var typer = document.getElementById("typewriter");
+    typewriter = setupTypewriter(typer, poems[0]);
+    typewriter.type();
+  </script>
+</body>
