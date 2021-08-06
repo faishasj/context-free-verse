@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free verse, context-free code poetry.">
+    <meta property="og:title" content="Context-Free Verse">
+    <meta name="og:description" content="Free verse, context-free code poetry.">
+    <title>Context-Free Verse</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/poem.css">
+    <link rel="stylesheet" href="../highlight/styles/base16/nebula.min.css">
+    <script src="../js/index.js"></script>
+    <script src="../highlight/highlight.min.js"></script>
+  </head>
+
+  <body class="hljs">
+    <div class="container hljs">
+      <div class="code">
+        <pre id="precode"><code id="typewriter" class="language-md"></code></pre>
+      </div>
+    </div>
+    
+    <script>
+      const about = 
+`# What is Context-Free Verse?
+
+A collection of poems written using the syntax of different 
+programming languages. A poem may be free verse, free of context, 
+or both. Hence, **context-free verse** (yes, a portmanteau of 
+"context-free grammar" and "free verse").
+
+# Why write code poetry?
+
+Writing poetry in a programming language is much like writing 
+poetry in a natural language. Both have *syntax* and *vocabulary*. 
+Although this may seem limiting, producing literature using 
+the unique properties of a language (natural or programming) can 
+be a creative challenge. 
+
+# Who is the author?
+
+My name is **Faisha** and I am a computer science undergrad and 
+AR/VR developer. I love programming, poetry, and thus an 
+amalgamation of the two.`
+
+      var precode = document.getElementById("precode");
+      precode.style.width = "80vh";
+      precode.style.height = "50vh";
+
+      var typer = document.getElementById("typewriter");
+      typewriter = setupTypewriter(typer, about, 1);
+      typewriter.type();
+    </script>
+  </body>
+</html>
