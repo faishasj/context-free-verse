@@ -24,7 +24,7 @@ function setupTypewriter(t, HTML) {
     hljs.highlightElement(t);
 
     cursorPosition += 1;
-    if (cursorPosition < HTML.length - 1) {
+    if (cursorPosition < HTML.length) {
       setTimeout(type, tempTypeSpeed);
     }
   }
