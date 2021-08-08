@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/poem.css">
     <link rel="stylesheet" href="../highlight/styles/base16/material-lighter.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <script src="../js/index.js"></script>
     <script src="../highlight/highlight.min.js"></script>
   </head>
@@ -17,9 +18,15 @@
   <body class="hljs">
     <div class="container hljs">
       <pre id="precode" class="no-cursor"><code id="code" class="language-brainfuck"></code></pre>
-      <pre id="preoutput"><code id="typewriter"></code></pre>
+      <pre id="preoutput"><code id="typewriter" class="language-none"></code></pre>
     </div>
-    
+
+    <div class="controls">
+      <div onclick="document.location.href='..'"><i class="fa fa-home" alt="home"></i></div>
+      <div onclick="typewriter.skip()"><i class="fa fa-fast-forward" alt="fast-forward"></i></div>
+      <div onclick="typewriter.reset()"><i class="fa fa-redo-alt" alt="play again"></i></div>
+    </div>
+
     <script>
       const poem = 
 `+++++++++[>++++++++++

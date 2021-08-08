@@ -33,6 +33,25 @@ pre code {
   width: 100vw;
 }
 
+.controls {
+  width: 100%;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls div {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.controls i {
+  cursor: pointer;
+}
+
 @-webkit-keyframes blink {
   0% {
     opacity: 0;

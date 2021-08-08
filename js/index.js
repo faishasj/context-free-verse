@@ -3,10 +3,11 @@ Code adapted from: https://css-tricks.com/snippets/css/typewriter-effect/
 */
 
 function setupTypewriter(t, content, typeSpeed) {
+  var timeout;
+  var cursorPosition = 0;
+  var tempTypeSpeed = 0;
+  
   t.innerHTML = "";
-
-  var cursorPosition = 0,
-      tempTypeSpeed = 0;
 
   var type = function() {
 
@@ -23,11 +24,26 @@ function setupTypewriter(t, content, typeSpeed) {
 
     cursorPosition += 1;
     if (cursorPosition < content.length) {
-      setTimeout(type, tempTypeSpeed);
+      timeout = setTimeout(type, tempTypeSpeed);
     }
   }
 
+  var skip = function() {
+    clearTimeout(timeout);
+    t.innerHTML = content;
+    hljs.highlightElement(t);
+  }
+
+  var reset = function() {
+    clearTimeout(timeout);
+    cursorPosition = 0;
+    t.innerHTML = "";
+    type();
+  }
+
   return {
-    type: type
+    type: type,
+    skip: skip,
+    reset: reset
   }
 }
