@@ -34,18 +34,19 @@ pre code {
 }
 
 .controls {
-  width: 100%;
+  position: absolute;
   bottom: 2rem;
   display: flex;
   flex-direction: row;
-  position: absolute;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
 }
 
 .controls div {
-  padding-left: 0.5rem;
   padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .controls i {
